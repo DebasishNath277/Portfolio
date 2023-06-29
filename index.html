@@ -16,8 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!-- css -->
-    <link href="portfolio.css" rel="stylesheet">
 
     <!-- Title -->
     <title>Portfolio</title>
@@ -36,21 +34,6 @@
             margin: 0;
             font-family: 'Times New Roman', Times, serif;
         }
-
-
-        /* .back::before {
-            position: fixed;
-            top: -30%;
-            left: -30%;
-            width: 170%;
-            height: 170%;
-            align-items: center;
-            justify-items: center;
-            content: '';
-            background-image: conic-gradient(transparent, #00ccff75, transparent, #ee00ff6c);
-            animation: rotate_border 6s linear infinite;
-        } */
-
 
 
 
@@ -108,7 +91,6 @@
 
         .sideText {
             background: linear-gradient(to right, rgb(0, 85, 205) 0%, rgba(0, 106, 255, 0.837) 80%, rgba(0, 106, 255, 0.682)94%, rgba(0, 106, 255, 0.576)100%);
-            /* background: rgb(0, 106, 255);  */
             width: 200px;
             border-left: 3px solid rgb(0, 0, 0);
             padding-left: 5px;
@@ -130,7 +112,6 @@
             border-bottom-left-radius: 50px;
             border-top-right-radius: 50px;
             align-items: center;
-            /* color: rgb(0, 0, 0); */
             height: auto;
             width: 280px;
             margin-top: 10vh;
@@ -147,7 +128,8 @@
             height: auto;
             width: 100%;
             position: relative;
-            padding: 2px;
+            padding: 3px;
+            border: 2px solid rgb(0, 217, 255);
         }
 
 
@@ -160,27 +142,11 @@
             align-items: center;
             justify-items: center;
             content: '';
-            background-image: conic-gradient(transparent, red, transparent, black);
-            /* background-image: conic-gradient(transparent, transparent, transparent, #ee00ff); */
-            animation: rotate_border 6s linear infinite;
+            background-image: conic-gradient(transparent, rgb(0, 200, 250), transparent, black);
+            animation: rotate_border 4s linear infinite;
 
         }
 
-        .imageCard::after {
-
-            position: fixed;
-            top: -100px;
-            height: 170%;
-            width: 170%;
-            align-items: center;
-            justify-items: center;
-            content: '';
-            /* background-image: conic-gradient(transparent, transparent, transparent, #00ccff); */
-
-            /* background-image: conic-gradient(transparent, #ee00ff80, transparent, #00ccff);
-            animation: rotate_border 6s linear infinite;
-            animation-delay: -3s; */
-        }
 
         @keyframes rotate_border {
             0% {
@@ -196,7 +162,7 @@
 
         .heading {
             font-weight: bold;
-            font-size: 20px;
+            font-size: 24px;
             background: linear-gradient(to right, rgb(0, 200, 255) 0%, rgb(108, 0, 181) 30%, rgb(21, 0, 255)60%, rgb(0, 11, 60)90%, rgb(0, 0, 0)100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -402,6 +368,8 @@
             background-size: 500% auto;
             background-color: transparent;
             animation: project 2.5s ease-in-out 0.5s infinite alternate-reverse forwards;
+            transform: rotate(-3deg);
+            overflow-x: hidden;
         }
 
         .projectsCard:hover {
@@ -410,7 +378,6 @@
             animation: none;
             position: relative;
             -webkit-text-fill-color: black;
-
         }
 
         @keyframes project {
@@ -447,9 +414,6 @@
             border-left: 5px solid rgb(150, 150, 150);
             box-shadow: 15px 15px 25px 0px rgb(59, 59, 59);
             margin-bottom: 5px;
-            /* animation: experianceMove 1s linear infinite alternate-reverse; */
-            /* animation: contactMeMove 1s linear infinite alternate-reverse; */
-
         }
 
         .experianceCard:hover {
@@ -478,62 +442,6 @@
                 border-bottom: none;
             }
         }
-
-        @keyframes experianceMove {
-            0% {
-                left: 0px;
-            }
-
-            20% {
-                left: 5px;
-            }
-
-            40% {
-                left: 10px;
-            }
-
-            60% {
-                left: 15px;
-            }
-
-            80% {
-                left: 20px;
-            }
-
-            90% {
-                left: 25px;
-            }
-
-            100% {
-                left: 30px;
-            }
-
-            90% {
-                left: 25px;
-            }
-
-            80% {
-                left: 20px;
-            }
-
-            60% {
-                left: 15px;
-            }
-
-            40% {
-                left: 10px;
-            }
-
-            20% {
-                left: 5px;
-            }
-
-            0% {
-                left: 0px;
-            }
-
-        }
-
 
         .experianceCardText {
             background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(74, 74, 74) 40%, rgb(98, 0, 0)60%, rgb(9, 0, 75)100%);
@@ -929,246 +837,308 @@
 
                     <div class="row mt-3 mb-5">
 
-                        <div class="col-xxl-4 mb-5">
-                            <div class="card projectsCard "
-                                style="border-left: 5px solid rgb(133, 0, 0); border-right: none; border-bottom: none;background: linear-gradient(0deg, rgba(255, 0, 0, 0.69) 0%, rgb(255, 252, 252) 30%, rgb(255, 255, 255) 61%, rgba(255, 255, 255, 0.909) 100%);">
-                                <div class="row">
-                                    <center>
-                                        <img src="https://i.ibb.co/0jbc3yW/Project24.gif"
-                                            style="width: 300px; height: auto;" alt="Project24" border="0">
-                                    </center>
-                                </div>
+                        <div class="col-lg-4 offset-lg-2 mb-5 ps-5 pe-5">
 
-                                <div class="row">
-                                    <center>
-                                        <h5 class="mb-0 pb-0 mt-3" style="color: rgb(174, 0, 0)">
-                                            <b>FIELD SERVICE MANAGEMENT</b>
-                                        </h5>
-                                        <p class="mb-0 pb-0" style="color: rgb(174, 0, 0)">
-                                            A Major Internship Project, M. C. A (4th sem)
-                                        </p>
-                                        <p class="mb-0 pb-0" style="color: red">January 2023 - May 2023</p>
-                                        <p class="mt-0 pt-0" style="color: rgba(255, 0, 0, 0.468)">
-                                            <b>Tezpur University</b>
-                                        </p>
-                                    </center>
-
-                                    <p style="color: red">A simple internship project where it keeps records of
-                                        the
-                                        Field Engineers and
-                                        Data Entry Users and also monitoring of the ongoing field service tasks
-                                        and
-                                        allow management team to have up-to-date visibility into the progress of
-                                        each
-                                        service request.
-                                    </p>
-
-                                    <p class="mb-0">
-                                        <b style="color: rgb(111, 0, 0); font-size: 18px">Role: </b>
-                                        <b style="color: rgba(132, 0, 0, 0.682)">Frontend Developer</b>
-                                    </p>
-
-                                    <p class="mb-0 pb-0">
-                                        <b style="color: rgb(132, 0, 0); font-size: 18px">Technologies Used</b>
-                                    </p>
-
-                                    <p class=" mt-0 pt-0">
-                                    <div class="row ms-0 me-0">
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Fluent UI</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">React.js</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">React Chart</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">CSS</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Bootstrap</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Springboot</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Hibernate ORM</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Axios</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Tomcat</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(255, 132, 132, 0.722); ">
-                                            <center><b style="color: rgb(186, 0, 0);">Jasper Report</b></center>
-                                        </div>
+                            <div class="row mb-5">
+                                <div class="card projectsCard "
+                                    style="border-left: 5px solid rgb(133, 0, 0); border-right: none; border-bottom: none;background: linear-gradient(0deg, rgba(255, 0, 0, 0.69) 0%, rgb(255, 252, 252) 30%, rgb(255, 255, 255) 61%, rgba(255, 255, 255, 0.909) 100%);">
+                                    <div class="row">
+                                        <center>
+                                            <img src="https://i.ibb.co/0jbc3yW/Project24.gif"
+                                                style="width: 300px; height: auto;" alt="Project24" border="0">
+                                        </center>
                                     </div>
-                                    </p>
+
+                                    <div class="row">
+                                        <center>
+                                            <h5 class="mb-0 pb-0 mt-3" style="color: rgb(174, 0, 0)">
+                                                <b>FIELD SERVICE MANAGEMENT</b>
+                                            </h5>
+                                            <p class="mb-0 pb-0" style="color: rgb(174, 0, 0)">
+                                                A Major Internship Project, M. C. A (4th sem)
+                                            </p>
+                                            <p class="mb-0 pb-0" style="color: red">January 2023 - May 2023</p>
+                                            <p class="mt-0 pt-0" style="color: rgba(255, 0, 0, 0.468)">
+                                                <b>Tezpur University</b>
+                                            </p>
+                                        </center>
+
+                                        <p style="color: red">A simple project where it keeps records of
+                                            the
+                                            Field Engineers and
+                                            Data Entry Users and also monitoring of the ongoing field service tasks
+                                            and
+                                            allow management team to have up-to-date visibility into the progress of
+                                            each
+                                            service request.
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <b style="color: rgb(111, 0, 0); font-size: 18px">Role: </b>
+                                            <b style="color: rgba(132, 0, 0, 0.682)">Frontend Developer</b>
+                                        </p>
+
+                                        <p class="mb-0 pb-0">
+                                            <b style="color: rgb(132, 0, 0); font-size: 18px">Technologies Used</b>
+                                        </p>
+
+                                        <p class=" mt-0 pt-0">
+                                        <div class="row ms-0 me-0">
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Fluent UI</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">React.js</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">React Chart</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">CSS</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Bootstrap</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Springboot</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-4 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Hibernate ORM</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Axios</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Tomcat</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(255, 132, 132, 0.722); ">
+                                                <center><b style="color: rgb(186, 0, 0);">Jasper Report</b></center>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-xxl-4 mb-5">
-                            <div class="card projectsCard "
-                                style="border-left: 5px solid blue; border-right: none; border-bottom: none ;background: linear-gradient(0deg, rgba(0, 200, 250, 0.537) 0%, rgb(255, 255, 255) 35%, rgb(251, 254, 255) 61%, rgba(255,255,255,0.9094012605042017) 100%);">
-                                <div class="row">
-                                    <center>
-                                        <img src="https://i.ibb.co/RQhSsW2/project21.gif"
-                                            style="width: 300px; height: auto;" alt="project21" border="0">
-                                    </center>
-                                </div>
-
-                                <div class="row">
-                                    <center>
-                                        <h5 class="mb-0 pb-0 pt-5" style="color: rgb(0, 0, 99)">
-                                            <b>DEPARTMENT MANAGEMENT SYSTEM</b>
-                                        </h5>
-                                        <p class="mb-0 pb-0" style="color: rgb(0, 0, 99)">
-                                            A Minor Project, M. C. A (3th sem)
-                                        </p>
-                                        <p class="mb-0 pb-0" style="color: rgb(0, 89, 255)">September 2022 -
-                                            December
-                                            2022</p>
-                                        <p class="mt-0 pt-0" style="color: rgba(8, 8, 255, 0.525)">
-                                            <b>Tezpur University</b>
-                                        </p>
-                                    </center>
-
-                                    <p style="color: rgb(38, 0, 255)">A simple project where it keeps records
-                                        and
-                                        monitoring all departmental details such as class timetable, assignment,
-                                        etc., and it also has an additional features like Invigilator Allotment
-                                        automatically for the Examination in different rooms.
-                                    </p>
-
-                                    <p class="mb-0">
-                                        <b style="color: rgb(0, 0, 99); font-size: 18px">Role: </b>
-                                        <b style="color: rgb(38, 0, 255)">Frontend Developer</b>
-                                    </p>
-
-                                    <p class="mb-0 pb-0">
-                                        <b style="color: rgb(0, 0, 99); font-size: 18px">Technologies Used</b>
-                                    </p>
-
-                                    <p class=" mt-0 pt-0">
-                                    <div class="row ms-0 me-0">
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">HTML</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">CSS</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">Bootstrap</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">Java Script</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">My SQL</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(0, 89, 255, 0.614);">
-                                            <center><b style="color: rgb(0, 0, 99)">PHP</b></center>
-                                        </div>
+                            <div class="row mb-5">
+                                <div class="card projectsCard "
+                                    style="border-left: 5px solid blue; border-right: none; border-bottom: none ;background: linear-gradient(0deg, rgba(0, 200, 250, 0.537) 0%, rgb(255, 255, 255) 35%, rgb(251, 254, 255) 61%, rgba(255,255,255,0.9094012605042017) 100%);">
+                                    <div class="row">
+                                        <center>
+                                            <img src="https://i.ibb.co/RQhSsW2/project21.gif"
+                                                style="width: 300px; height: auto;" alt="project21" border="0">
+                                        </center>
                                     </div>
-                                    </p>
+
+                                    <div class="row">
+                                        <center>
+                                            <h5 class="mb-0 pb-0 pt-5" style="color: rgb(0, 0, 99)">
+                                                <b>DEPARTMENT MANAGEMENT SYSTEM</b>
+                                            </h5>
+                                            <p class="mb-0 pb-0" style="color: rgb(0, 0, 99)">
+                                                A Minor Project, M. C. A (3th sem)
+                                            </p>
+                                            <p class="mb-0 pb-0" style="color: rgb(0, 89, 255)">September 2022 -
+                                                December
+                                                2022</p>
+                                            <p class="mt-0 pt-0" style="color: rgba(8, 8, 255, 0.525)">
+                                                <b>Tezpur University</b>
+                                            </p>
+                                        </center>
+
+                                        <p style="color: rgb(38, 0, 255)">A simple project where it keeps records
+                                            and monitoring all departmental details and it also has an additional feature
+                                            like automatrically Invigilator Allotment.
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <b style="color: rgb(0, 0, 99); font-size: 18px">Role: </b>
+                                            <b style="color: rgb(38, 0, 255)">Frontend Developer</b>
+                                        </p>
+
+                                        <p class="mb-0 pb-0">
+                                            <b style="color: rgb(0, 0, 99); font-size: 18px">Technologies Used</b>
+                                        </p>
+
+                                        <p class=" mt-0 pt-0">
+                                        <div class="row ms-0 me-0">
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">HTML</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">CSS</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">Bootstrap</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">Java Script</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">My SQL</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(0, 89, 255, 0.614);">
+                                                <center><b style="color: rgb(0, 0, 99)">PHP</b></center>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
 
-                        <div class="col-xxl-4 mb-5">
-                            <div class="card projectsCard"
-                                style="border-left: 5px solid rgb(23, 100, 0); border-right: none; border-bottom: none ;background: linear-gradient(0deg, rgba(0, 255, 191, 0.537) 0%, rgba(210, 255, 247, 0.706) 35%, rgb(255, 255, 255) 61%, rgba(255, 255, 255, 0.909) 100%);">
-                                <div class="row">
-                                    <center>
-                                        <img src="https://i.ibb.co/M1WNnwN/Project.jpg"
-                                            style="width: 300px; height: auto;" alt="Project" border="0">
-                                    </center>
-                                </div>
+                        <div class="col-lg-4 mb-5 ps-5 pe-5">
 
-                                <div class="row">
-                                    <center>
-                                        <h5 class="mb-0 pb-0 mt-5" style="color: rgb(13, 57, 0)">
-                                            <b>MODERN ATTENDANCE SYSTEM</b>
-                                        </h5>
-                                        <p class="mb-0 pb-0" style="color: rgb(13, 57, 0)">
-                                            A Major Project, BSc. (6th sem)
-                                        </p>
-                                        <p class="mb-0 pb-0" style="color: rgb(17, 129, 7)">December 2019 -
-                                            November
-                                            2020</p>
-                                        <p class="mt-0 pt-0" style="color: rgba(24, 102, 0, 0.541)">
-                                            <b>Gurucharan College</b>
-                                        </p>
-                                    </center>
-
-                                    <p style="color: rgb(17, 129, 7)">A simple project where it keeps records of
-                                        the
-                                        daily attendance of the students and also keep records of the class
-                                        details,
-                                        marks, notes, student details as well as faculty details of an
-                                        organization.
-                                    </p>
-
-                                    <p class="mb-0">
-                                        <b style="color:  rgb(13, 57, 0); font-size: 18px">Role: </b>
-                                        <b style="color: rgb(17, 129, 7)">Frontend Developer</b>
-                                    </p>
-
-                                    <p class="mb-0 pb-0">
-                                        <b style="color:  rgb(13, 57, 0); font-size: 18px">Technologies Used</b>
-                                    </p>
-
-                                    <p class=" mt-0 pt-0">
-                                    <div class="row ms-0 me-0">
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color: rgb(13, 57, 0)">HTML</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color: rgb(13, 57, 0)">CSS</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color:rgb(13, 57, 0) ">Bootstrap</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-3 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color: rgb(13, 57, 0)">Java Script</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color: rgb(13, 57, 0)">My SQL</b></center>
-                                        </div>
-                                        <div class="projectTechnologyUsed col-sm-2 mt-1 mb-1 ms-1 me-1"
-                                            style="background: rgba(17, 129, 7, 0.469); ">
-                                            <center><b style="color:rgb(13, 57, 0) ">PHP</b></center>
-                                        </div>
+                            <div class="row mb-5">
+                                <div class="card projectsCard"
+                                    style="border-left: 5px solid rgb(23, 100, 0); border-right: none; border-bottom: none ;background: linear-gradient(0deg, rgba(0, 255, 191, 0.537) 0%, rgba(210, 255, 247, 0.706) 35%, rgb(255, 255, 255) 61%, rgba(255, 255, 255, 0.909) 100%);">
+                                    <div class="row">
+                                        <center>
+                                            <img src="https://i.ibb.co/M1WNnwN/Project.jpg"
+                                                style="width: 300px; height: auto;" alt="Project" border="0">
+                                        </center>
                                     </div>
-                                    </p>
+
+                                    <div class="row">
+                                        <center>
+                                            <h5 class="mb-0 pb-0 mt-5" style="color: rgb(13, 57, 0)">
+                                                <b>MODERN ATTENDANCE SYSTEM</b>
+                                            </h5>
+                                            <p class="mb-0 pb-0" style="color: rgb(13, 57, 0)">
+                                                A Major Project, BSc. (6th sem)
+                                            </p>
+                                            <p class="mb-0 pb-0" style="color: rgb(17, 129, 7)">December 2019 -
+                                                November
+                                                2020</p>
+                                            <p class="mt-0 pt-0" style="color: rgba(24, 102, 0, 0.541)">
+                                                <b>Gurucharan College</b>
+                                            </p>
+                                        </center>
+
+                                        <p style="color: rgb(17, 129, 7)">A simple project where it keeps records of
+                                            the
+                                            daily attendance of the students and also keep records of the class
+                                            details as well as faculty details of an
+                                            organization.
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <b style="color:  rgb(13, 57, 0); font-size: 18px">Role: </b>
+                                            <b style="color: rgb(17, 129, 7)">Frontend Developer</b>
+                                        </p>
+
+                                        <p class="mb-0 pb-0">
+                                            <b style="color:  rgb(13, 57, 0); font-size: 18px">Technologies Used</b>
+                                        </p>
+
+                                        <p class=" mt-0 pt-0">
+                                        <div class="row ms-0 me-0">
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color: rgb(13, 57, 0)">HTML</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color: rgb(13, 57, 0)">CSS</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color:rgb(13, 57, 0) ">Bootstrap</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color: rgb(13, 57, 0)">Java Script</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color: rgb(13, 57, 0)">My SQL</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgba(17, 129, 7, 0.469); ">
+                                                <center><b style="color:rgb(13, 57, 0) ">PHP</b></center>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                            <div class="row mb-5">
+                                <div class="card projectsCard"
+                                    style="border-left: 5px solid rgb(79, 0, 85); border-right: none; border-bottom: none ;background: linear-gradient(0deg, rgba(238, 0, 255, 0.537) 0%, rgba(255, 210, 249, 0.706) 35%, rgb(255, 255, 255) 61%, rgba(255, 255, 255, 0.909) 100%);">
+                                    <div class="row">
+                                        <center>
+                                            <img src="https://i.ibb.co/M1WNnwN/Project.jpg"
+                                                style="width: 300px; height: auto;" alt="Project" border="0">
+                                        </center>
+                                    </div>
+
+                                    <div class="row">
+                                        <center>
+                                            <h5 class="mb-0 pb-0 mt-5" style="color: rgb(79, 0, 85)">
+                                                <b>PERSONAL PORTFOLIO </b>
+                                            </h5>
+                                            <p class="mb-0 pb-0" style="color: rgb(79, 0, 85)">
+                                                A Mini Project
+                                            </p>
+                                            <p class="mb-0 pb-0" style="color: rgb(158, 0, 169)">May 2023</p>
+
+                                            </p>
+                                        </center>
+
+                                        <p style="color: rgb(158, 0, 169)">A simple portfolio website to express about
+                                            me and my works to the world.
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <b style="color:  rgb(79, 0, 85); font-size: 18px">Role: </b>
+                                            <b style="color: rgb(158, 0, 169)">Frontend Developer</b>
+                                        </p>
+
+                                        <p class="mb-0 pb-0">
+                                            <b style="color:  rgb(79, 0, 85); font-size: 18px">Technologies Used</b>
+                                        </p>
+
+                                        <p class=" mt-0 pt-0">
+                                        <div class="row ms-0 me-0">
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgb(238, 0, 255); ">
+                                                <center><b style="color: rgb(79, 0, 85)">HTML</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-2 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgb(238, 0, 255); ">
+                                                <center><b style="color: rgb(79, 0, 85)">CSS</b></center>
+                                            </div>
+                                            <div class="projectTechnologyUsed col-xl-3 mt-1 mb-1 ms-1 me-1"
+                                                style="background: rgb(238, 0, 255); ">
+                                                <center><b style="color:rgb(79, 0, 85) ">Bootstrap</b></center>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
 
                     </div>
 
@@ -1557,7 +1527,7 @@
 
                     <div class="row mb-5 mt-3">
                         <div class="col-lg-4">
-                            <div class="card mt-4 contactMeThanks"
+                            <div class="card mt-0 contactMeThanks"
                                 style="border-left: 4px solid red; border-right: 4px solid red; border-bottom: none; border-top: none;">
                                 <center>
                                     <h1><i class="fa fa-handshake-o iconDesign pt-1 " style="color: red;"></i>
