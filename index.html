@@ -26,11 +26,30 @@
     <style>
         /* Body */
 
+        .body {
+            display: flex;
+
+        }
+
         .back {
             padding: 0;
             margin: 0;
             font-family: 'Times New Roman', Times, serif;
         }
+
+
+        /* .back::before {
+            position: fixed;
+            top: -30%;
+            left: -30%;
+            width: 170%;
+            height: 170%;
+            align-items: center;
+            justify-items: center;
+            content: '';
+            background-image: conic-gradient(transparent, #00ccff75, transparent, #ee00ff6c);
+            animation: rotate_border 6s linear infinite;
+        } */
 
 
 
@@ -111,11 +130,13 @@
             border-bottom-left-radius: 50px;
             border-top-right-radius: 50px;
             align-items: center;
-            color: white;
+            /* color: rgb(0, 0, 0); */
             height: auto;
             width: 280px;
             margin-top: 10vh;
             margin-left: 7px;
+            position: relative;
+            overflow: hidden;
         }
 
         .photo {
@@ -124,8 +145,53 @@
             border-bottom-left-radius: 50px;
             border-top-right-radius: 50px;
             height: auto;
-            width: 280px;
+            width: 100%;
+            position: relative;
+            padding: 2px;
         }
+
+
+        .imageCard::before {
+
+            position: absolute;
+            top: -100px;
+            height: 170%;
+            width: 170%;
+            align-items: center;
+            justify-items: center;
+            content: '';
+            background-image: conic-gradient(transparent, red, transparent, black);
+            /* background-image: conic-gradient(transparent, transparent, transparent, #ee00ff); */
+            animation: rotate_border 6s linear infinite;
+
+        }
+
+        .imageCard::after {
+
+            position: fixed;
+            top: -100px;
+            height: 170%;
+            width: 170%;
+            align-items: center;
+            justify-items: center;
+            content: '';
+            /* background-image: conic-gradient(transparent, transparent, transparent, #00ccff); */
+
+            /* background-image: conic-gradient(transparent, #ee00ff80, transparent, #00ccff);
+            animation: rotate_border 6s linear infinite;
+            animation-delay: -3s; */
+        }
+
+        @keyframes rotate_border {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
 
 
         .heading {
@@ -151,7 +217,7 @@
         }
 
         .position {
-            font-size: 14px;
+            font-size: 15px;
             background: linear-gradient(to right, rgb(0, 42, 255) 0%, rgb(19, 0, 142) 40%, rgb(7, 0, 85)60%, rgb(0, 0, 0)100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -365,9 +431,9 @@
             }
         }
 
-        .projectTechnologyUsed{
-            font-size: 14px; 
-            padding-top: 5px; 
+        .projectTechnologyUsed {
+            font-size: 15px;
+            padding-top: 5px;
             padding-bottom: 5px;
         }
 
@@ -381,11 +447,36 @@
             border-left: 5px solid rgb(150, 150, 150);
             box-shadow: 15px 15px 25px 0px rgb(59, 59, 59);
             margin-bottom: 5px;
-            animation: experianceMove 2.5s linear infinite alternate-reverse;
+            /* animation: experianceMove 1s linear infinite alternate-reverse; */
+            /* animation: contactMeMove 1s linear infinite alternate-reverse; */
+
         }
 
         .experianceCard:hover {
             animation: none;
+        }
+
+        .imageDesign {
+            animation: experianceImage 1s linear infinite alternate-reverse;
+
+        }
+
+        @keyframes experianceImage {
+            0% {
+                background-position: 0% 50%;
+                -webkit-transform: rotate(2deg);
+                border-right: none;
+                border-top: none;
+                border-bottom: none;
+            }
+
+            100% {
+                background-position: 100% 50%;
+                -webkit-transform: rotate(-2deg);
+                border-right: none;
+                border-top: none;
+                border-bottom: none;
+            }
         }
 
         @keyframes experianceMove {
@@ -481,7 +572,7 @@
 
 
         .skillsCard {
-            font-size: 14px;
+            font-size: 15px;
             border: none;
             border-radius: 10px;
             margin-top: 3px;
@@ -528,10 +619,10 @@
             background: linear-gradient(to right, rgb(229, 229, 229)0%, rgb(255, 255, 255)100%);
             background-size: 500% auto;
             border-left: 4px solid rgb(0, 0, 0);
-            animation: contactMeHover 0.7s ease-in-out infinite alternate-reverse;
+            animation: contactMeMove 0.7s ease-in-out infinite alternate-reverse;
         }
 
-        @keyframes contactMeHover {
+        @keyframes contactMeMove {
             0% {
                 background-position: 0% 50%;
                 -webkit-transform: rotate(10deg);
@@ -574,7 +665,7 @@
         /* Extra */
 
         p {
-            font-size: 14px;
+            font-size: 15px;
             margin-left: 0px;
         }
     </style>
@@ -746,7 +837,8 @@
                                                 style="color: rgb(93, 93, 93);padding-left: 30px;">2021-
                                                 2023</b></h6>
                                         <p class="pb-0 mb-0"><b>Master of Computer Application (M. C. A)</b></p>
-                                        <p class="pt-0 mt-0 mb-0 pb-0" style="color:rgb(255, 157, 0);">CGPA - 7.28 / 10</p>
+                                        <p class="pt-0 mt-0 mb-0 pb-0" style="color:rgb(255, 157, 0);">CGPA - 7.28 / 10
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -765,11 +857,13 @@
                                     </div>
                                     <div class="col-sm-8 offset-sm-1 pt-1 pb-1">
                                         <h4><b>Gra</b><b style="color: rgb(0, 30, 255);">duation</b></h4>
-                                        <h6  class="pb-0 mb-0"><b>Gurucharan College, Assam</b><b
+                                        <h6 class="pb-0 mb-0"><b>Gurucharan College, Assam</b><b
                                                 style="color: rgb(93, 93, 93);padding-left: 30px;">2017-
                                                 2020</b></h6>
-                                        <p class="pb-0 mb-0"><b>Bachelor in Science (Computer Science)</b></p class="pb-0 mb-0">
-                                        <p  class="pt-0 mt-0 mb-0 pb-0" style="color:rgb(0, 153, 255);">CGPA - 6.97 / 10</p class="pb-0 mb-0">
+                                        <p class="pb-0 mb-0"><b>Bachelor in Science (Computer Science)</b></p
+                                            class="pb-0 mb-0">
+                                        <p class="pt-0 mt-0 mb-0 pb-0" style="color:rgb(0, 153, 255);">CGPA - 6.97 / 10
+                                        </p class="pb-0 mb-0">
                                     </div>
                                 </div>
                             </div>
@@ -787,10 +881,11 @@
                                     </div>
                                     <div class="col-sm-8 offset-sm-1 pt-1 pb-1">
                                         <h4><b>Class </b><b style="color:  rgb(174, 0, 255);">XII</b></h4>
-                                        <h6  class="pb-0 mb-0"><b>Ramanuj Gupta Junior College, Assam </b><b
+                                        <h6 class="pb-0 mb-0"><b>Ramanuj Gupta Junior College, Assam </b><b
                                                 style="color: rgb(93, 93, 93);padding-left: 30px;">2015-
                                                 2017</b></h6>
-                                        <p class="pb-0 mb-0 mb-0 pb-0" style="color:rgb(255, 0, 144);">Percentage - 62.2%</p class="pb-0 mb-0">
+                                        <p class="pb-0 mb-0 mb-0 pb-0" style="color:rgb(255, 0, 144);">Percentage -
+                                            62.2%</p class="pb-0 mb-0">
                                     </div>
                                 </div>
                             </div>
@@ -809,9 +904,10 @@
                                     </div>
                                     <div class="col-sm-8 offset-sm-1 pt-1 pb-1">
                                         <h4><b>Class</b><b style="color:   rgb(0, 204, 51);"> X</b></h4>
-                                        <h6  class="pb-0 mb-0"><b>Ramanuj Vidya Mandir, Assam</b><b
+                                        <h6 class="pb-0 mb-0"><b>Ramanuj Vidya Mandir, Assam</b><b
                                                 style="color: rgb(93, 93, 93);padding-left: 30px;">2015</b></h6>
-                                        <p class="pb-0 mb-0 mb-0 pb-0" style="color: rgb(118, 141, 0);">Percentage - 76.67%</p class="pb-0 mb-0">
+                                        <p class="pb-0 mb-0 mb-0 pb-0" style="color: rgb(118, 141, 0);">Percentage -
+                                            76.67%</p class="pb-0 mb-0">
                                     </div>
                                 </div>
                             </div>
@@ -1098,7 +1194,8 @@
                                             <center>
                                                 <div class="row">
                                                     <div class="col-md-10 offset-md-1 pt-1 mt-0 ps-5">
-                                                        <img src="https://i.ibb.co/Pcr0P2B/project12.gif"
+                                                        <img class="imageDesign"
+                                                            src="https://i.ibb.co/Pcr0P2B/project12.gif"
                                                             style="width: 290px; height: auto;" alt="project12"
                                                             border="0">
                                                     </div>
@@ -1107,11 +1204,15 @@
                                         </div>
                                         <div class="col-xxl-8 pt-3 pb-5 ps-5 pe-5 ">
                                             <div class="row">
-                                                <h4 class="mb-0 mt-0 pt-0" style="color: red;"><b>FRONTEND DEVELOPER</b></h4>
-                                                <h5 class="mb-0 mt-0" style="color: rgba(0, 38, 255, 0.882);"><b>Infinity
-                                                        System</b></h5>
+                                                <h4 class="mb-0 mt-0 pt-0" style="color: red;"><b>FRONTEND DEVELOPER</b>
+                                                </h4>
+                                                <h5 class="mb-0 mt-0" style="color: rgba(0, 38, 255, 0.882);">
+                                                    <b>Infinity
+                                                        System</b>
+                                                </h5>
                                                 <p class="mb-0 mt-0 pt-0">
-                                                <h6 class="mt-0" style="color: rgba(44, 44, 44, 0.857);">January 2023 - May
+                                                <h6 class="mt-0" style="color: rgba(44, 44, 44, 0.857);">January 2023 -
+                                                    May
                                                     2023</h6>
                                                 </p>
 
@@ -1122,7 +1223,8 @@
                                                         internship
                                                         project.
                                                     </p>
-                                                    <p class="mb-0">➢ Collaborated with the development team to design and
+                                                    <p class="mb-0">➢ Collaborated with the development team to design
+                                                        and
                                                         implement
                                                         the
                                                         front-end components using React JS
